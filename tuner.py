@@ -45,3 +45,24 @@ plt.plot(T, yout)
 
 plt.show()
 
+
+
+
+
+
+
+
+
+
+
+
+delta = 4 # damping factor
+
+for delta in np.arange(1.0, 50, 2):
+
+    BW_speed = np.arange(5, 100, 10)
+    BW_current = BW_speed * (delta + 2.16 * exp(-delta/2.8) - 1.86)
+
+    plt.plot(BW_speed, BW_current, '--')
+
+
